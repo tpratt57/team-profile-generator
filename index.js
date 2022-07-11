@@ -12,21 +12,65 @@ const outputPath = path.join(OUTPUT_DIR, 'index.html');
 const teamMembers = [];
 
 const promptManager = () => {
-    return inquirer.prompt({
-        type: 'input',
-        name: 'name',
-        message: 'What is your name? (Required)',
-        validate: nameInput => {
-            if (nameInput){
-                return true;
+    return inquirer.prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'What is your name? (Required)',
+            validate: nameInput => {
+                if(nameInput){
+                    return true;
+                }
+                else{
+                    console.log('Please enter your name!')
+                    return false;
+                }
             }
-            else{
-                console.log('Please enter your name.')
-                return false;
+        },
+        {
+            type: 'input',
+            name: 'employeeId',
+            message: 'What is your employee id? (Required)',
+            validate: employeeIdInput => {
+                if(employeeIdInput){
+                    return true;
+                }
+                else{
+                    console.log('Please enter your employee id!')
+                    return false;
+                }
             }
-        }
-
-    })
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your email? (Required)',
+            validate: emailInput => {
+                if(emailInput){
+                    return true;
+                }
+                else{
+                    console.log('Please enter your email!')
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'roomNumber',
+            message: 'What is your Room Number? (Required)',
+            validate: roomNumberInput => {
+                if(roomNumberInput){
+                    return true;
+                }
+                else{
+                    console.log('Please enter your roomNumber!')
+                    return false;
+                }
+            }
+        },
+    ])
+        
 }
 
 promptManager();
