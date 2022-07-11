@@ -43,6 +43,9 @@ THEN I exit the application, and the HTML is generated
 ## Screenshot
 This is a screenshot of the generated HTML webpage.
 
+![Desktop Screenshot 2022 07 10 - 21 55 46 27](https://user-images.githubusercontent.com/104174101/178180367-148c1079-595a-4caa-b7f6-fc245e442bfd.png)
+
+
 ## License
 
 This project was created by Trevor Pratt
